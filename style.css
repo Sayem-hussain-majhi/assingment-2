@@ -36,6 +36,9 @@
 
 /* nav raleted style */
 nav {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,8 +52,8 @@ nav {
     align-items: center;
 }
 
-.logo>div {
-    width: 90px;
+.logo div {
+    width: 80px;
 }
 
 .logo img {
@@ -96,7 +99,8 @@ nav ul li a i {
 
 /* banner related styles */
 .banner {
-    padding: 0 100px;
+    padding: 100px 0px;
+    /* margin-top: 100px; */
     display: flex;
     justify-content: space-between;
 }
@@ -188,6 +192,7 @@ nav ul li a i {
     text-align: center;
     color: #0B0223;
     font-size: 2rem;
+    margin-top: 20px;
     font-weight: 700;
     padding-top: 1.5rem 0 1rem 0;
 }
@@ -216,6 +221,8 @@ nav ul li a i {
 .cart img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
+    z-index: 1;
     transition: 0.3s;
 }
 
@@ -230,7 +237,7 @@ nav ul li a i {
     top: 0;
     text-align: center;
     border-radius: 9px;
-    padding: 150px 90px 128px;
+    padding: 50% 40% 69%;
     background-color: #3c354fcb;
     border: 1px solid #FF42A5;
     
@@ -247,6 +254,7 @@ nav ul li a i {
 .play-icon p{
     color: #F948B2;
 }
+
 
 .cart:hover .play-icon{
     display: block;
@@ -272,7 +280,7 @@ nav ul li a i {
 }
 
 .play-instantly-content {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,12 +304,12 @@ nav ul li a i {
 }
 
 .play-instantly-img {
-    width: 50%;
+    width: 100%;
     height: 60vh;
 }
 
 .play-instantly-img img {
-    width: 70%;
+    width: 100%;
     height: 400px;
 
 }
@@ -309,7 +317,7 @@ nav ul li a i {
 .play-instantly-pic {
     position: absolute;
     top: 65%;
-    right: 45%;
+    right: 43%;
     width: 150px;
 }
 
@@ -465,23 +473,36 @@ footer p a {
 @media screen and (max-width: 576px) {
     nav{
         flex-direction: column;
-        padding:20px 50px;
+        padding:20px 0px;
         padding-bottom: 30px;
     }
     nav ul{
         flex-direction: column;
+        width: 80%;
+        margin-left: -50px;
     }
     nav ul li{
-        padding: 10px 30px;
+        padding: 10px 0px;
+    }
+    nav ul li a i{
+        padding-left: 5px;
+    }
+
+    .logo{
+        width: 70%;
+        margin-left: -10px;
+    }
+    .logo h1{
+        font-size: 2rem;
     }
 
     /* banner section */
     .banner{
         flex-direction: column-reverse;
-        padding: 20px ;
+        padding: 300px 10px 0 10px;
     }
     .banner-img{
-        width: 120%;
+        width: 100%;
     }
     .banner-content{
         width: 100%;
@@ -504,6 +525,7 @@ footer p a {
     }
     .gamer-content p{
         text-align: center;
+        padding: 0 20px;
     }
     /* cart container */
     .cart-container{
@@ -511,11 +533,12 @@ footer p a {
         padding: 0 40px; 
     }
     .cart img{
+        margin-top: 20px;
         width: 500%;
     }
 
     .cart p{
-        width: 70%;
+        width: 400%;
     }
 
     /* .play-instantly-container */
@@ -526,15 +549,29 @@ footer p a {
     .play-instantly-img{
         width: 100%;
     }
+
+    .play-instantly-img img{
+        width: 80%;
+        padding-left: 80px;
+    }
     .play-instantly-container{
         flex-direction: column;
         justify-content: center;
         width: 100%;
         padding: 0;
+        margin-top: 40px;
     }
     .play-instantly-content h1{
         width: 100%;
         text-align: center;
+    }
+    .play-instantly p{
+        line-height: 1.5rem;
+    }
+
+    .play-instantly-pic{
+        left: 0;
+        right: 0;
     }
     /* games-ad-container */
     .games-ad-container{
@@ -556,5 +593,16 @@ footer p a {
     footer p a{
         display: grid;
         grid-template-columns: repeat(2, 10px);
+    }
+
+     .privacy{
+        padding: 5px;
+    }
+}
+
+/* tablte device */
+@media screen and (min-width:576) and (max-width:922) {
+    .cart-container{
+        grid-template-columns: repeat(2, 40%);
     }
 }
