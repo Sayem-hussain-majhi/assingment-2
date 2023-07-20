@@ -213,7 +213,7 @@ nav ul li a i {
     gap: 10px;
 }
 
-.cart {
+/* .cart {
     width: 20%;
     position: relative; 
 }
@@ -224,9 +224,9 @@ nav ul li a i {
     cursor: pointer;
     z-index: 1;
     transition: 0.3s;
-}
+} */
 
-.cart p {
+/* .cart p {
     color: #534C64;
     font-size: 1rem;
     font-weight: 500;
@@ -258,7 +258,7 @@ nav ul li a i {
 
 .cart:hover .play-icon{
     display: block;
-}
+} */
 
 
 
@@ -446,16 +446,20 @@ footer i {
     padding: 1rem;
 }
 
-.Privacy {
+.Privacy ul li {
     display: flex;
-    padding: 1rem 0 1.4rem 0 ;
+    padding: 1rem  ;
+    color: #534C64;
 }
 
-footer p a {
+
+
+/* footer p a {
     padding: 1.8rem 1.5rem;
     color: rgba(255, 255, 255, 0.452);
     font-weight: 500;
-}
+   
+} */
 
 .copyright {
     color: rgba(255, 255, 255, 0.253);
@@ -469,6 +473,36 @@ footer p a {
     display: none;
 }
 
+.box{
+    width: 22%;
+    height: 350px;
+  
+}
+.box p{
+    padding: 10px;
+}
+
+.box div{
+    height: 295px;
+    display: flex;justify-content: center;
+    align-items: center;
+    background-color: #0B0223;
+    border-radius: 10px;
+    color: #4EC5F7;
+    flex-direction: column;
+   
+}
+
+.box div img{
+    width: 100%;
+    transition: 0.3s;
+    
+}
+
+.box div img:hover{
+    opacity: 0.5;
+}
+
 /* small screen devices */
 @media screen and (max-width: 576px) {
     nav{
@@ -478,7 +512,7 @@ footer p a {
     }
     nav ul{
         flex-direction: column;
-        width: 80%;
+        width: 60%;
         margin-left: -50px;
     }
     nav ul li{
@@ -496,13 +530,12 @@ footer p a {
         font-size: 2rem;
     }
 
-    /* banner section */
     .banner{
         flex-direction: column-reverse;
         padding: 300px 10px 0 10px;
     }
     .banner-img{
-        width: 100%;
+        width: 120%;
     }
     .banner-content{
         width: 100%;
@@ -530,11 +563,19 @@ footer p a {
     /* cart container */
     .cart-container{
         flex-direction: column;
-        padding: 0 40px; 
+        padding: 0 20px; 
     }
-    .cart img{
-        margin-top: 20px;
-        width: 500%;
+    .box{
+        width: 100%;
+        margin: 60px 0;
+    }
+    .box div{
+        width: 97%;
+        height: 400px;
+        background-color: #c4302b;
+    }
+    .box div img{
+        width: fit-content;
     }
 
     .cart p{
@@ -590,13 +631,8 @@ footer p a {
         padding: 10px 0;
     }
 
-    footer p a{
-        display: grid;
-        grid-template-columns: repeat(2, 10px);
-    }
-
      .privacy{
-        padding: 5px;
+        grid-template-columns: repeat(2, 50px);
     }
 }
 
@@ -606,3 +642,4 @@ footer p a {
         grid-template-columns: repeat(2, 40%);
     }
 }
+
