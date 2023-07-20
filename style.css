@@ -239,7 +239,6 @@ nav ul li a i {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .main-box:hover .cart-logo{
     display: block;
